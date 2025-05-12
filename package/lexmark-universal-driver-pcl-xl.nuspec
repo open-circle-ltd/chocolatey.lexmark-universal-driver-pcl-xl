@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lexmark-universal-driver-pcl-xl</id>
+    <version>3.0.7.0</version>
+    <owners>Open Circle AG, kve</owners>
+    <title>Lexmark Universal Driver PCL XL</title>
+    <authors>Lexmark International, Inc.</authors>
+    <projectUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</projectUrl>
+    <projectSourceUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</projectSourceUrl>
+    <docsUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</docsUrl>
+    <licenseUrl>https://www.lexmark.com/de_ch/legal/terms-and-conditions.html</licenseUrl>
+    <tags>lexmark universal printer driver pcl xl</tags>
+    <summary>lexmark universal printer driver pcl xl</summary>
+    <description>installs printer driver</description>
+    <dependencies>
+      <dependency id="7zip.install" />
+    </dependencies>
+  </metadata>
+</package>
