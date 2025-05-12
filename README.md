@@ -1,4 +1,4 @@
-# Chocolatey Package: Lexmark Universal Printdriver PCL XL
+# Lexmark Universal Printdriver PCL XL
 
 ## Description
 
@@ -13,6 +13,7 @@ choco install lexmark-universal-driver-pcl-xl
 ## TODO
 
 - Integrate ChocoMilk Updater
+
     Lexmark does not provide a centralized directory or listing for available versions. May not be feaseable
 
 ## Disclaimer
