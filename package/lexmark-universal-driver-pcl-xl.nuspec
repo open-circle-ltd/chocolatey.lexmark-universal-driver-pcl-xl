@@ -14,7 +14,7 @@
     <licenseUrl>https://www.lexmark.com/de_ch/legal/terms-and-conditions.html</licenseUrl>
     <tags>lexmark universal printer driver pcl xl</tags>
     <summary>lexmark universal printer driver pcl xl</summary>
-    <description>installs printer driver</description>
+    <description>Installs the Lexmark Universal Print Driver PCL XL</description>
     <dependencies>
       <dependency id="7zip.install" />
     </dependencies>
