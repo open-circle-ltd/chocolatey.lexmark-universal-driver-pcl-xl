@@ -6,7 +6,7 @@ changelog: "https://release-monitoring.org/api/v2/versions/?project_id=378130"
 changelog_format: json
 
 # Regex for Version
-version: "{{ register_changelog.json['latest_version'] }}" # TODO
+version: "{{ register_changelog.json['latest_version'] }}"
 
 # Download URL
 url: "https://downloads.lexmark.com/downloads/drivers/Lexmark_Universal_v2_UD1_Installation_Package_{{ version }}.exe"
@@ -15,10 +15,8 @@ searchreplace:
   "tools/chocolateyinstall.ps1":
     - regwxp: (^\s*[$]*url\s*=\s*)('.*')
       replace: "$url = '{{ url }}'"
-#    - regwxp: (^\s*[$]*checksum\s*=\s*)('.*')
-#      replace: "$checksum = '{{ file_hash }}'"
-
-# Checksum may be broken. Needs to be SHA512 of .msi, but will be SHA512 of .exe
+    - regwxp: (^\s*[$]*checksum\s*=\s*)('.*')
+      replace: "$checksum = '{{ file_hash }}'"
 
 # readme to description
 readme:
