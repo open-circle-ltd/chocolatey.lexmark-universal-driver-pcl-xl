@@ -19,6 +19,7 @@ choco install lexmark-universal-driver-pcl-xl
 
 - Add icon
 - Create chocolateyuninstall.ps1
+- Fix Checksum update with chocomilk
 
 ## Disclaimer
 
