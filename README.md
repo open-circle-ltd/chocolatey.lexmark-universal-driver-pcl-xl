@@ -14,7 +14,7 @@ choco install lexmark-universal-driver-pcl-xl
 
 - Integrate ChocoMilk Updater
 
-    Lexmark does not provide a centralized directory or listing for available versions. May not be feaseable.<br>
+    Lexmark does not provide a centralized directory or listing for available versions. ~~May not be feaseable~~.<br>
     Version information from: [release-monitoring.org Project](https://release-monitoring.org/project/378130/)
 
 ## Disclaimer
