@@ -13,6 +13,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   url           = $msiPath
   checksum      = $checksum
+  # TODO: Fix Checksum
   checksumType  = 'sha512'
   destination   = $toolsDir
 
