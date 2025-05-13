@@ -17,6 +17,9 @@ choco install lexmark-universal-driver-pcl-xl
     Lexmark does not provide a centralized directory or listing for available versions. ~~May not be feaseable~~.<br>
     Version information from: [release-monitoring.org Project](https://release-monitoring.org/project/378130/)
 
+- Add icon
+- Create chocolateyuninstall.ps1
+
 ## Disclaimer
 
 These Chocolatey Packages only contain installation routines. The software itself is downloaded from the official sources of the software developer. Open Circle AG has no affilation with the software developer.
