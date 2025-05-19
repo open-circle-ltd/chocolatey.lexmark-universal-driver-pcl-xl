@@ -14,7 +14,22 @@
     <licenseUrl>https://www.lexmark.com/de_ch/legal/terms-and-conditions.html</licenseUrl>
     <tags>lexmark universal printer driver pcl xl</tags>
     <summary>lexmark universal printer driver pcl xl</summary>
-    <description>Installs the Lexmark Universal Print Driver PCL XL</description>
+    <description>Installs the Lexmark Universal Print Driver PCL XL
+    
+    ## Parameters
+
+    - `/32bit`: Install 32-bit version (Default is 64-bit).
+    - `/Product`: Default: `XL`
+    - `PCL` | Install the PCL Driver
+    - `XL` | Install the PCL XL Driver
+    - `PostScript` | Install the PostScript Driver
+
+    ## Installation
+
+    ```ps1
+    choco install lexmark-universal-driver-pcl-xl --params="'/32bit /Product:PCL'"
+    ```   
+    </description>
     <dependencies>
       <dependency id="7zip.install" />
     </dependencies>
