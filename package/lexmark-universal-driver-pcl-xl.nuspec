@@ -4,7 +4,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lexmark-universal-driver-pcl-xl</id>
-    <version>3.0.7.0</version>
+    <version>03072025</version>
     <owners>Open Circle AG, kve</owners>
     <title>Lexmark Universal Driver PCL XL</title>
     <authors>Lexmark International, Inc.</authors>
