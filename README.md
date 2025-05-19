@@ -4,10 +4,18 @@
 
 This Package will install the Lexmark Universal Printdriver PCL XL v3.0.7. 
 
+## Parameters
+
+- `/32bit`: Install 32-bit version (Default is 64-bit).
+- `/Product`: Default: `XL`
+    - `PCL` | Install the PCL Driver
+    - `XL` | Install the PCL XL Driver
+    - `PostScript` | Install the PostScript Driver
+
 ## Installation
 
 ```ps1
-choco install lexmark-universal-driver-pcl-xl
+choco install lexmark-universal-driver-pcl-xl --params="'/32bit /Product:PCL'"
 ```
 
 ## TODO
