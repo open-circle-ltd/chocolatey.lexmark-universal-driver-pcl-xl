@@ -2,15 +2,15 @@
 
 ## Description
 
-This Package will install the Lexmark Universal Printdriver PCL XL v3.0.7. 
+Installs different types of the Lexmark Universal Print Driver 
 
 ## Parameters
 
 - `/32bit`: Install 32-bit version (Default is 64-bit).
 - `/Product`: Default: `XL`
-    - `PCL` | Install the PCL Driver
-    - `XL` | Install the PCL XL Driver
-    - `PostScript` | Install the PostScript Driver
+    - `PCL`:          Install the PCL Driver
+    - `XL`:           Install the PCL XL Driver
+    - `PostScript`:   Install the PostScript Driver
 
 ## Installation
 
@@ -18,16 +18,19 @@ This Package will install the Lexmark Universal Printdriver PCL XL v3.0.7.
 choco install lexmark-universal-driver-pcl-xl --params="'/32bit /Product:PCL'"
 ```
 
+## Dependencies
+
+This pacakge requires the package `7zip.install` to extract the installer.
+
 ## TODO
 
 - Integrate ChocoMilk Updater
 
-    Lexmark does not provide a centralized directory or listing for available versions.<br>
     Version information from: [release-monitoring.org Project](https://release-monitoring.org/project/378130/)
 
 - Add icon
 - Create chocolateyuninstall.ps1
-- ~~Fix Checksum update with chocomilk~~
+
 
 ## Disclaimer
 
