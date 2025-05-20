@@ -52,7 +52,7 @@ New-Item -ItemType Directory -Force -Path $tempDir | Out-Null
 New-Item -ItemType Directory -Force -Path $tempDir\extract | Out-Null
 
 Get-ChocolateyWebFile -PackageName $packageName -FileFullPath $exePath -Url $url -Checksum $checksum -ChecksumType 'sha512'
-Start-Process -FilePath $7zPath -ArgumentList $7zArguments -Wait -NoNewWindow -RedirectStandardOutput $logPath -RedirectStandardError $logPath
+Start-Process -FilePath $7zPath -ArgumentList $7zArguments -Wait -NoNewWindow -RedirectStandardOutput $logPath
 
 $packageArgs = @{
   packageName   = $packageName
