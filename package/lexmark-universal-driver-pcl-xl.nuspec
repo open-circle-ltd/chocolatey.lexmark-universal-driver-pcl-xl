@@ -9,7 +9,7 @@
     <title>Lexmark Universal Driver</title>
     <authors>Lexmark International, Inc.</authors>
     <projectUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</projectUrl>
-    <projectSourceUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</projectSourceUrl>
+    <projectSourceUrl>https://github.com/open-circle-ltd/chocolatey.lexmark-universal-driver-pcl-xl</projectSourceUrl>
     <docsUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</docsUrl>
     <licenseUrl>https://www.lexmark.com/de_ch/legal/terms-and-conditions.html</licenseUrl>
     <tags>lexmark universal printer driver pcl xl postscript</tags>
