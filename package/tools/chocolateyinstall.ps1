@@ -10,20 +10,19 @@ $exePath = Join-Path $tempDir "$packageName.exe"
 $7zPath = Join-Path $env:ProgramFiles "7-Zip\7z.exe"
 $7zArguments = "x `"$exePath`" -o`"$tempDir\extract`" -y"
 
-# Set defaults
-$arch = "x64"
-$driverType = "XL"
-
-# Available parameters
+# Available drivers
 $driverTypes = @("PCL", "XL", "PostScript_Emulation")
-$architectures = @("x64", "x86")
+
+# Set defaults
+$arch = "64"
+$driverType = "XL"
 
 if ($PackageParameters) {
 
     # /32bit parameter check
     if ($PackageParameters["32bit"]) {
       Write-Host "Installing 32-bit version."
-      $arch = "x86"
+      $arch = "86"
     } else {
       Write-Host "Installing 64-bit version."
     }
@@ -37,19 +36,25 @@ if ($PackageParameters) {
           "PostScript" { $driverType = "PostScript_Emulation"}
           default { Write-Warning "Product type unknown: '$product'! Installing XL."}
         }
+        Write-Host "Installing $product Driver."
     }
+} else {
+  Write-Debug "No Parameters passed in"
+  Write-Host "Installing 64-bit version."
+  Write-Host "Installing Driver $driverType."
 }
 
 # Construct path to .msi
 $driverFile = switch ($driverType) {
     "PCL" { "print$arch`PCL.msi" }
     "XL" { "print$arch`XL.msi" }
-    "PostScript_Emulation" { "print$arch`PS.msi" }
+    "PostScript_Emulation" { "print$arch`PostScript_Emulation.msi" }
   }
-$msiPath = Join-Path $tempDir "\extract\InstallationPackage\Drivers\$arch\$driverFile"
+$msiPath = Join-Path $tempDir "\extract\InstallationPackage\Drivers\x$arch\$driverFile"
 
 
 # Create Temp Directory
+# Silence Output
 New-Item -ItemType Directory -Force -Path $tempDir
 New-Item -ItemType Directory -Force -Path $tempDir\extract
 
@@ -64,7 +69,7 @@ $packageArgs = @{
   checksum      = $checksum
   checksumType  = 'sha512'
   destination   = $toolsDir
-  softwareName  = "Lexmark Universal v2 $driverType Print Driver"
+  softwareName  = "Lexmark Universal v2 Print Driver"
   fileType      = 'msi'
   silentArgs    = '/quiet /norestart'
 }
