@@ -1,4 +1,4 @@
-# Lexmark Universal Printdriver PCL XL
+# Lexmark Universal Printdriver 
 
 ## Description
 
