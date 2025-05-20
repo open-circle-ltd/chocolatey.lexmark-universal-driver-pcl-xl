@@ -3,7 +3,7 @@ $PackageParameters = Get-PackageParameters
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = 'https://downloads.lexmark.com/downloads/drivers/Lexmark_Universal_v2_UD1_Installation_Package_03072025.exe'
-$checksum = '29282342698A28EF4081F9432E19D2BB843EAF0A5488CCBB5459F08D021247048FF003AA862AC4314739CF7290CCFDAE62FE89A77DD9BD2B39C53BE597C0AB34'
+$checksum = '017ae8977f2714409c25e8a54da69e94f027f32712196a0334d68ad1277080217ff5a76fef105d31189003a580f86335db8ef1d8bf3e045539b2e028771a5836'
 
 $tempDir = Join-Path $env:TEMP $packageName
 $exePath = Join-Path $tempDir "$packageName.exe"
@@ -39,9 +39,9 @@ if ($PackageParameters) {
         Write-Host "Installing $product Driver."
     }
 } else {
-  Write-Debug "No Parameters passed in"
-  Write-Host "Installing 64-bit version."
-  Write-Host "Installing Driver $driverType."
+    Write-Debug "No Parameters passed in"
+    Write-Host "Installing 64-bit version."
+    Write-Host "Installing $driverType Driver."
 }
 
 # Construct path to .msi
@@ -59,19 +59,18 @@ New-Item -ItemType Directory -Force -Path $tempDir
 New-Item -ItemType Directory -Force -Path $tempDir\extract
 
 # Download/Extract .exe
-Invoke-WebRequest -Uri $url -OutFile $exePath
+Get-ChocolateyWebFile -PackageName $packageName -FileFullPath $exePath -Url $url -Checksum $checksum -ChecksumType 'sha512'
+
 Start-Process -FilePath $7zPath -ArgumentList $7zArguments -Wait -NoNewWindow
 
 # Install package
 $packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  url           = $msiPath
-  checksum      = $checksum
-  checksumType  = 'sha512'
-  destination   = $toolsDir
-  softwareName  = "Lexmark Universal v2 Print Driver"
+  packageName   = $packageName
   fileType      = 'msi'
+  file          = $msiPath
+  softwareName  = "Lexmark Universal v2 Print Driver"
   silentArgs    = '/quiet /norestart'
+  validExitCodes= @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
