@@ -24,10 +24,6 @@ This pacakge requires the package `7zip.install` to extract the installer.
 
 ## TODO
 
-- Integrate ChocoMilk Updater
-
-    Version information from: [release-monitoring.org Project](https://release-monitoring.org/project/378130/)
-
 - Add icon
 - Create chocolateyuninstall.ps1
 
