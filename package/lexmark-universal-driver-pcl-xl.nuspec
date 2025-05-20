@@ -6,29 +6,34 @@
     <id>lexmark-universal-driver-pcl-xl</id>
     <version>03072025</version>
     <owners>Open Circle AG, kve</owners>
-    <title>Lexmark Universal Driver PCL XL</title>
+    <title>Lexmark Universal Driver</title>
     <authors>Lexmark International, Inc.</authors>
     <projectUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</projectUrl>
     <projectSourceUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</projectSourceUrl>
     <docsUrl>https://www.lexmark.com/de_ch/support/universal-print-driver.html</docsUrl>
     <licenseUrl>https://www.lexmark.com/de_ch/legal/terms-and-conditions.html</licenseUrl>
-    <tags>lexmark universal printer driver pcl xl</tags>
-    <summary>lexmark universal printer driver pcl xl</summary>
-    <description>Installs the Lexmark Universal Print Driver PCL XL
+    <tags>lexmark universal printer driver pcl xl postscript</tags>
+    <summary>lexmark universal printer driver </summary>
+    <description>Installs different types of the Lexmark Universal Print Driver 
     
     ## Parameters
 
     - `/32bit`: Install 32-bit version (Default is 64-bit).
     - `/Product`: Default: `XL`
-    - `PCL` | Install the PCL Driver
-    - `XL` | Install the PCL XL Driver
-    - `PostScript` | Install the PostScript Driver
+        - `PCL`:          Install the PCL Driver
+        - `XL`:           Install the PCL XL Driver
+        - `PostScript`:   Install the PostScript Driver
 
     ## Installation
 
     ```ps1
     choco install lexmark-universal-driver-pcl-xl --params="'/32bit /Product:PCL'"
     ```   
+    
+    ## Dependencies
+
+    This pacakge requires the package `7zip.install` to extract the installer.
+
     </description>
     <dependencies>
       <dependency id="7zip.install" />
