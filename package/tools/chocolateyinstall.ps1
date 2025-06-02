@@ -11,6 +11,7 @@ $tempDir = Join-Path $env:TEMP $packageName
 $exePath = Join-Path $tempDir "$packageName.exe"
 $logPath = Join-Path $tempDir "install.log"
 
+# Defaults
 $arch = "64"
 $driverType = "XL"
 
