@@ -10,8 +10,6 @@ $checksum = '017ae8977f2714409c25e8a54da69e94f027f32712196a0334d68ad1277080217ff
 $tempDir = Join-Path $env:TEMP $packageName
 $exePath = Join-Path $tempDir "$packageName.exe"
 $logPath = Join-Path $tempDir "install.log"
-$7zPath = Join-Path $env:ProgramFiles "7-Zip\7z.exe"
-$7zArguments = "x `"$exePath`" -o`"$tempDir\extract`" -y"
 
 $arch = "64"
 $driverType = "XL"
@@ -52,7 +50,6 @@ New-Item -ItemType Directory -Force -Path $tempDir | Out-Null
 New-Item -ItemType Directory -Force -Path $tempDir\extract | Out-Null
 
 Get-ChocolateyWebFile -PackageName $packageName -FileFullPath $exePath -Url $url -Checksum $checksum -ChecksumType 'sha512'
-# Start-Process -FilePath $7zPath -ArgumentList $7zArguments -Wait -NoNewWindow -RedirectStandardOutput $logPath
 Get-ChocolateyUnzip -FileFullPath $exePath -Destination $tempDir\extract
 
 $packageArgs = @{
