@@ -31,7 +31,7 @@ deploy:
   - provider: github
     name: "OpenCircle-Choco-Bot"
     email: "chocomilk@open-circle.ch"
-    url: github.com/open-circle-ltd/chocolatey.wwphone.git
+    url: github.com/open-circle-ltd/chocolatey.lexmark-universal-driver-pcl-xl.git
     key: "{{ lookup('env','GITHUB_API_KEY') }}"
 
 # Notification
