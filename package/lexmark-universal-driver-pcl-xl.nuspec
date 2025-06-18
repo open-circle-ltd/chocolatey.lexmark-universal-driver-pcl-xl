@@ -8,8 +8,7 @@
     <owners>Open Circle AG, kve</owners>
     <title>Lexmark Universal Driver</title>
     <authors>Lexmark International, Inc.</authors>
-    <projectUrl>https://www.lexmark.com/</projectUrl>
-    <projectSourceUrl>https://www.lexmark.com/en_us/support/universal-print-driver.html</projectSourceUrl>
+    <projectUrl>https://www.lexmark.com/en_us/support/universal-print-driver.html</projectUrl>
     <packageSourceUrl>https://github.com/open-circle-ltd/chocolatey.lexmark-universal-driver-pcl-xl</packageSourceUrl>
     <docsUrl>https://www.lexmark.com/en_us/technical-support/universal-print-driver-support.html</docsUrl>
     <licenseUrl>https://www.lexmark.com/en_us/legal/terms-and-conditions.html</licenseUrl>
