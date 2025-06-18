@@ -57,7 +57,7 @@ $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
   file          = $msiPath
-  softwareName  = "Lexmark Universal v2 Print Driver"
+  softwareName  = "Lexmark Universal v2*"
   silentArgs    = '/quiet /norestart'
   validExitCodes= @(0)
 }
