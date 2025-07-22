@@ -18,10 +18,6 @@ Installs different types of the Lexmark Universal Print Driver
 choco install lexmark-universal-driver-pcl-xl --params="'/32bit /Product:PCL'"
 ```
 
-## Dependencies
-
-This pacakge requires the package `7zip.install` to extract the installer.
-
 ## TODO
 
 - Add icon
